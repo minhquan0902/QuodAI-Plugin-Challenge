@@ -1,0 +1,35 @@
+<idea-plugin>
+  <id>com.your.company.unique.plugin.id</id>
+  <name>Com.Github.Minhquan0902.Quodaipluginchallenge</name>
+  <version>1.0</version>
+  <vendor email="minhquan0902" >minhquan0902</vendor>
+
+  <depends>com.intellij.modules.vcs</depends>
+  <depends>com.intellij.modules.lang</depends>
+  <depends>com.intellij.modules.platform</depends>
+
+  <description><![CDATA[
+      <b>A Small extensions to open local file on GitHub and to display Repo Stars</b><br>
+    ]]></description>
+
+  <change-notes><![CDATA[
+     Add Change Note Here!
+    ]]>
+  </change-notes>
+
+  <!-- please see https://plugins.jetbrains.com/docs/intellij/build-number-ranges.html for description -->
+  <idea-version since-build="201.6668.113"/>
+
+  <!-- please see https://plugins.jetbrains.com/docs/intellij/plugin-compatibility.html
+       on how to target different products -->
+  <depends>com.intellij.modules.platform</depends>
+
+  <extensions defaultExtensionNs="com.intellij">
+    <!-- Add your extensions here -->
+  </extensions>
+
+  <actions>
+    <!-- Add your actions here -->
+  </actions>
+
+</idea-plugin>
