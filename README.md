@@ -1,6 +1,6 @@
 # QuodAI-Plugin-Challenge
 
-##App description
+## App description
 
 Create a simple JetBrains extensions to:
 
