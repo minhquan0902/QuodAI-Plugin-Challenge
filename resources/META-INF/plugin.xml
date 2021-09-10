@@ -1,5 +1,5 @@
 <idea-plugin>
-  <id>com.your.company.unique.plugin.id</id>
+  <id>1.01</id>
   <name>Com.Github.Minhquan0902.Quodaipluginchallenge</name>
   <version>1.0</version>
   <vendor email="minhquan0902" >minhquan0902</vendor>
@@ -7,6 +7,7 @@
   <depends>com.intellij.modules.vcs</depends>
   <depends>com.intellij.modules.lang</depends>
   <depends>com.intellij.modules.platform</depends>
+  <depends>Git4Idea</depends>
 
   <description><![CDATA[
       <b>A Small extensions to open local file on GitHub and to display Repo Stars</b><br>
@@ -26,15 +27,47 @@
 
   <extensions defaultExtensionNs="com.intellij">
     <!-- Add your extensions here -->
-
+    <projectService serviceImplementation="com.minhquan0902.quodaiplugin.linkGitHub.Git.RepositoryLocator" />
+    <applicationService serviceImplementation="com.minhquan0902.quodaiplugin.linkGitHub.UI.ExceptionRenderer" />
+    <applicationService serviceImplementation="com.minhquan0902.quodaiplugin.linkGitHub.URL.Modifier.UrlModifierProvider" />
     <applicationService serviceImplementation="com.minhquan0902.quodaiplugin.linkGitHub.Plugin"/>
+    <applicationService serviceImplementation="com.minhquan0902.quodaiplugin.linkGitHub.URL.Substitution.URLTemplateProcessor"/>
     <applicationService serviceImplementation="com.minhquan0902.quodaiplugin.linkGitHub.URL.Handler.BrowserHandler"/>
-    <applicationService serviceImplementation="com.minhquan0902.quodaiplugin.linkGitHub.URL.Modifier.UrlModifierProvider"/>
+    <applicationService serviceImplementation="com.minhquan0902.quodaiplugin.linkGitHub.URL.Factory.GitHubUrlFactory"/>
+    <projectService serviceImplementation="com.minhquan0902.quodaiplugin.linkGitHub.URL.Factory.UrlFactoryLocator"/>
+    <projectService serviceImplementation="com.minhquan0902.quodaiplugin.linkGitHub.Preferences"/>
+    <projectService serviceImplementation="com.minhquan0902.quodaiplugin.linkGitHub.LinkGitHub" />
+    <projectConfigurable instance="com.minhquan0902.quodaiplugin.linkGitHub.UI.Settings.ConfigurableSettings"/>
+    <selectInTarget implementation="com.minhquan0902.quodaiplugin.linkGitHub.UI.Extensions.BrowserSelectInTarget"/>
+    <vcsAnnotationGutterActionProvider implementation="com.minhquan0902.quodaiplugin.linkGitHub.UI.Extensions.AnnotationGutterActionProvider" />
 
   </extensions>
 
   <actions>
     <!-- Add your actions here -->
+    <action
+            id="com.minhquan0902.quodaiplugin.linkGitHub.UI.Action.Menu.MenuAction.Browser"
+            class="com.minhquan0902.quodaiplugin.linkGitHub.UI.Action.Menu.BrowserMenuAction"
+            text="Open in Git Host"
+            description="Opens the file in the git host using the default browser"
+    >
+      <add-to-group group-id="ViewMenu" anchor="last"/>
+      <add-to-group group-id="EditorPopupMenu"/>
+      <add-to-group group-id="ProjectViewPopupMenu"/>
+      <add-to-group group-id="EditorTabPopupMenu"/>
+      <keyboard-shortcut keymap="Mac OS X 10.5+" first-keystroke="shift ctrl O"/>
+      <keyboard-shortcut keymap="$default" first-keystroke="shift ctrl O"/>
+    </action>
+
+    <action
+            id="com.minhquan0902.quodaiplugin.linkGitHub.UI.Action.VcsLog.BrowserVcsAction"
+            class="com.minhquan0902.quodaiplugin.linkGitHub.UI.Action.VcsLog.BrowserVcsAction"
+            text="Open in Git Host"
+            description="Opens the commit in the git host using the default browser"
+    >
+      <add-to-group group-id="Git.LogContextMenu" />
+      <add-to-group group-id="Vcs.Log.ContextMenu" />
+    </action>
   </actions>
 
 </idea-plugin>
