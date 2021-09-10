@@ -1,25 +1,27 @@
 package com.minhquan0902.quodaiplugin.linkGitHub.UI.Settings;
 
 import com.intellij.openapi.options.ConfigurationException;
-import com.intellij.ui.*;
+import com.intellij.ui.EnumComboBoxModel;
+import com.intellij.ui.Gray;
+import com.intellij.ui.HyperlinkLabel;
+import com.intellij.ui.JBColor;
 import com.intellij.ui.components.JBCheckBox;
 import com.intellij.uiDesigner.core.GridConstraints;
 import com.intellij.uiDesigner.core.GridLayoutManager;
 import com.intellij.uiDesigner.core.Spacer;
 import com.intellij.util.ui.JBUI;
 import com.jgoodies.forms.layout.CellConstraints;
-import com.jgoodies.forms.layout.FormLayout;
 import com.minhquan0902.quodaiplugin.linkGitHub.Git.RemoteHost;
 import com.minhquan0902.quodaiplugin.linkGitHub.Plugin;
 import com.minhquan0902.quodaiplugin.linkGitHub.Preferences;
 import com.minhquan0902.quodaiplugin.linkGitHub.URL.Modifier.UrlModifier;
+import com.jgoodies.forms.layout.FormLayout;
 
 import javax.swing.*;
 import java.awt.*;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-
 
 
 public class Settings {
