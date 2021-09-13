@@ -20,5 +20,6 @@
       </library>
     </orderEntry>
     <orderEntry type="library" exported="" name="jgoodies.forms" level="project" />
+    <orderEntry type="library" exported="" name="json" level="project" />
   </component>
 </module>

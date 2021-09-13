@@ -67,11 +67,13 @@ public class Repository {
                 if (this.remote().hasBranch(this, localBranch)) {
                     return new Branch(localBranch.getName());
                 }
-            } catch (BranchException | InstantiationException | IllegalAccessException exception) {
+            } catch (BranchException | IllegalAccessException exception) {
                 GitRemoteBranch trackedBranch = localBranch.findTrackedBranch(this.repository);
                 if (trackedBranch != null) {
                     return new Branch(trackedBranch.getName());
                 }
+            } catch (InstantiationException  e) {
+                e.printStackTrace();
             }
         }
 

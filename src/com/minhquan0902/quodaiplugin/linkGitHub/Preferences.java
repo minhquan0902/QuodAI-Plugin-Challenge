@@ -5,7 +5,6 @@ import com.minhquan0902.quodaiplugin.linkGitHub.Git.Branch;
 import com.minhquan0902.quodaiplugin.linkGitHub.Git.RemoteHost;
 import com.minhquan0902.quodaiplugin.linkGitHub.URL.Modifier.UrlModifier;
 import org.jetbrains.annotations.NotNull;
-import com.intellij.openapi.components.PersistentStateComponent;
 import com.intellij.openapi.components.State;
 import com.intellij.openapi.components.Storage;
 import com.intellij.util.xmlb.XmlSerializerUtil;

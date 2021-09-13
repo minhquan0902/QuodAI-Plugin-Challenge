@@ -18,12 +18,6 @@
     ]]>
   </change-notes>
 
-  <!-- please see https://plugins.jetbrains.com/docs/intellij/build-number-ranges.html for description -->
-  <idea-version since-build="201.6668.113"/>
-
-  <!-- please see https://plugins.jetbrains.com/docs/intellij/plugin-compatibility.html
-       on how to target different products -->
-  <depends>com.intellij.modules.platform</depends>
 
   <extensions defaultExtensionNs="com.intellij">
     <!-- Add your extensions here -->
@@ -68,6 +62,12 @@
       <add-to-group group-id="Git.LogContextMenu" />
       <add-to-group group-id="Vcs.Log.ContextMenu" />
     </action>
+
+
+    <group id="ShowGitHubStars.Action" text="Show GitHub Stars of Repo" description="Show gitHub stars">
+      <add-to-group group-id="MainMenu" anchor="last"/>
+      <action class="com.minhquan0902.quodaiplugin.showstars.ShowGitHubStars" id ="com.minhquan0902.quodaiplugin.showstars.ShowGitHubStars" text="Show Stars"/>
+    </group>
   </actions>
 
 </idea-plugin>

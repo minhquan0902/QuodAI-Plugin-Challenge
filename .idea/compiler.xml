@@ -2,7 +2,7 @@
 <project version="4">
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
-      <module name="QuodAI-Plugin-Challenge" options="--add-exports com.fasterxml.aalto/com.intellij.util.ui=ALL-UNNAMED --add-exports com.fasterxml.aalto/com.intellij.ui=ALL-UNNAMED" />
+      <module name="QuodAI-Plugin-Challenge" options="--add-exports com.fasterxml.aalto/com.intellij.util.ui=ALL-UNNAMED --add-exports com.fasterxml.aalto/com.intellij.ui=ALL-UNNAMED --add-exports com.fasterxml.aalto/com.intellij.openapi.extensions=ALL-UNNAMED --add-exports com.fasterxml.aalto/com.intellij.util.xmlb=ALL-UNNAMED --add-exports com.fasterxml.aalto/com.intellij.openapi.util=ALL-UNNAMED" />
     </option>
   </component>
 </project>
