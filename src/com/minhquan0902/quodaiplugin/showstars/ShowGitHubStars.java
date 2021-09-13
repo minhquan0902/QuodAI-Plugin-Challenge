@@ -76,9 +76,7 @@ public class ShowGitHubStars extends AnAction {
 
             // Test Search Function using keyword
             ArrayList<String> searchList = new ArrayList<String>();
-
-            System.out.println("Search Result for 'abc': ");
-            System.out.println("\n-----------------------------");
+            
             for (String element: dataArray){
                 assert getRepoName != null;
                 if (element.contains(getRepoName.toUpperCase())){

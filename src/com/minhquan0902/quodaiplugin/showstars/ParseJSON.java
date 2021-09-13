@@ -6,6 +6,8 @@ import org.json.JSONObject;
 import java.util.ArrayList;
 import java.util.HashMap;
 
+
+// ParseJSON to HashMap and ArrayList for data searching and Indexing
 public class ParseJSON {
 
     public static HashMap<String, Integer> putDataToHashMap(String responseBody, HashMap<String, Integer> dataHashMap){
